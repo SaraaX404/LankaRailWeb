@@ -24,10 +24,15 @@ const Index = () => {
 
 
     const fetchData = async()=>{
+      try{
       const res = await httpClient.get('/users/me')
       if(res.data){
         setProfile(res.data)
       }
+      }catch(e){
+        console.log(e)
+      }
+     
     }
   
     useEffect(()=>{

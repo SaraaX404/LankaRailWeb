@@ -98,7 +98,10 @@ function fixedHeaderContent() {
 function RowContent(_index, row) {
 
   const rowClick = (e) => {
-    window.location.href = `/reserve/${e?._id}/${e?.date}/${e?.price}`
+    if(0 < e?.availableSeats){
+      window.location.href = `/reserve/${e?._id}/${e?.date}/${e?.price}`
+    }
+    
   };
 
   return (

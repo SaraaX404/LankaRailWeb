@@ -61,7 +61,7 @@ const Index = () => {
             train: id,
             quantity:data.quantity,
             price:priceX,
-            status:"active"
+            status:"unpaid"
         }
         await dispatch(createBooking(saveData));
         window.location.href = '/history'

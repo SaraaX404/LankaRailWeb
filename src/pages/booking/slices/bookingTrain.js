@@ -11,6 +11,9 @@ export const createBooking = createAsyncThunk(
         `${API_BASE_URL}/bookings`,
         requestData
       );
+
+      window.open(`https://lanka-rail-payment.vercel.app?price=${response?.data?.price}&id=${response?.data?._id}`)
+      console.log(console.log(response.data))
       return response.data;
     } catch (error) {
       console.log(error);
